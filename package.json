@@ -1,0 +1,26 @@
+{
+  "name": "react-flux-poc",
+  "version": "0.0.1",
+  "description": "React & Flux App proof of concept",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teologov/react-flux-poc.git"
+  },
+  "keywords": [
+    "react",
+    "flux",
+    "babel",
+    "app",
+    "poc"
+  ],
+  "author": "Andrew Teologov <teologov.and@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teologov/react-flux-poc/issues"
+  },
+  "homepage": "https://github.com/teologov/react-flux-poc"
+}
