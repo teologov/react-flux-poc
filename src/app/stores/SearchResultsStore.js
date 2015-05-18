@@ -48,7 +48,7 @@ let SearchResultsStore	= assign({}, EventEmitter.prototype, {
 				SearchResultsStore.emitChange();
 			break;
         }
-	})
+    })
 });
 
 export default SearchResultsStore;

@@ -3,28 +3,28 @@ import emptyFunction from "react/lib/emptyFunction";
 
 export default class Search extends React.Component {
 
-	static propTypes = {
-		onSubmit: PropTypes.function
-	}
+    static propTypes = {
+        onSearch: PropTypes.func
+    }
 
-	static defaultProps = {
-		onSubmit: emptyFunction
-	}
+    static defaultProps = {
+        onSearch: emptyFunction
+    }
 
-	render() {
-		return (
-			<form onSubmit={this.onFormSubmit}>
-				<input 
-				ref="inputTerm"
-				type="text" />
-				<button type="submit">Search</button>
-			</form>
-		)
-	}
+    render() {
+        return (
+            <form onSubmit={this.onFormSubmit.bind(this)}>
+                <input
+                    ref={component => this.term = component}
+                    type="text" />
+                <button type="submit">Search</button>
+            </form>
+        );
+    }
 
-	onFormSubmit = (e) => {
-		e.preventDefault();
-		console.log(this.refs);
-		this.props.onSearch(React.findDOMNode(this.refs.inputTerm).value);
-	}
+    onFormSubmit(evt) {
+        evt.preventDefault();
+        this.props.onSearch(React.findDOMNode(this.term).value);
+    }
+
 }
