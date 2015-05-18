@@ -13,7 +13,7 @@ export default class Search extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.onFormSubmit.bind(this)}>
+            <form onSubmit={this.onFormSubmit}>
                 <input
                     ref={component => this.term = component}
                     type="text" />
@@ -22,7 +22,7 @@ export default class Search extends React.Component {
         );
     }
 
-    onFormSubmit(evt) {
+    onFormSubmit = evt => {
         evt.preventDefault();
         this.props.onSearch(React.findDOMNode(this.term).value);
     }

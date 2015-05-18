@@ -14,8 +14,8 @@ export default class RCEH extends React.Component {
             results: SearchResultsStore.getResults()
         };
 
-        this.onSearch = this.onSearch.bind(this);
-        this.onStoresChange = this.onStoresChange.bind(this);
+        this.onSearch = this.onSearch;
+        this.onStoresChange = this.onStoresChange;
     }
 
     componentDidMount() {
@@ -30,7 +30,7 @@ export default class RCEH extends React.Component {
         return nextState.results != this.state.results;
     }
 
-    onStoresChange() {
+    onStoresChange = () => {
         this.setState({
             results: SearchResultsStore.getResults()
         });
@@ -47,7 +47,7 @@ export default class RCEH extends React.Component {
         );
     }
 
-    onSearch(term) {
+    onSearch = term => {
         search(term);
     }
 }
