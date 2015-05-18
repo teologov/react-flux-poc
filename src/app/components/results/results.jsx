@@ -3,9 +3,9 @@ import { List } from "immutable";
 import Result from "components/result/Result.jsx";
 // function(result) {return result}
 export default class Results extends React.Component {
-	static propTypes = {
+	/*static propTypes = {
 		results: PropTypes.object.isRequired
-	}
+	}*/
 
 	render() {
 		return (
